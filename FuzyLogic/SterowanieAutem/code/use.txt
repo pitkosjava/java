@@ -1,0 +1,2 @@
+Wymagania .
+NetBeans81. Java 7 lub 8.
