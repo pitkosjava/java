@@ -1,0 +1,8 @@
+Projekt nalezy importowac do NetBeans 8.1.Podczas importu moze pojawic sie 
+Blad klasy PanelRysowanie zwiazane jest to z paleta ktora nie umie odnalezc danej klasy w tym celu nalezy:
+1. Kod klasy PanelRysowanie nelezy skopiowac.
+2. Usunac klase PanelRysowanie Delete.
+3. Wszystkie dzialania na danej klasie umiescic w komentarzach javy // lub /** panelRysowanie1.metod() **/
+4. Utworzyc klase PanelRysowanie jako JPanelForm.
+5. Wkleic skopiowany kod.
+6. Odkomentowac metody i operacje dzialajace na klasie skometowane w punkcie 3.
