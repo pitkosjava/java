@@ -104,7 +104,6 @@ public class MyFrame extends JFrame {
 					byte[] data = new byte[(int) file.length()];
 					fis.read(data);
 					StreamMessage message = session.createStreamMessage();
-					// message.writeString((String)jphotos.getSelectedItem());
 					message.writeInt(data.length);
 					message.writeBytes(data);
 					producer.send(message);
