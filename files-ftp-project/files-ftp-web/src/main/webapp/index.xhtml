@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<div class="jumbotron">
+			<h1>Words app</h1>
+		</div>
+		<h:form>
+			<div class="contents">
+				<div class="col-md-6">
+
+					<div class="row">
+						<h1>
+							<span class="label label-default">Global words</span>
+						</h1>
+					</div>
+					<div class="row">
+						<h:inputText id="message" value="#{messageControler.message}" />
+						<h:commandButton id="messagebuuton"
+							action="#{messageControler.addMessage()}" value="Add"
+							styleClass="btn-info">
+							<f:ajax execute="@form" render="@form"></f:ajax>
+						</h:commandButton>
+					</div>
+
+					<div class="row">
+						<h1>
+							<span class="label label-default">New words</span>
+						</h1>
+					</div>
+
+					<ui:repeat var="tab" value="#{allMessage}">
+						<div class="row">
+							<span class="label label-pill label-success">#{tab}</span>
+						</div>
+					</ui:repeat>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<h1>
+							<span class="label label-default">You box memmber words</span>
+						</h1>
+
+					</div>
+					<div class="row">
+						<h:inputText id="messagebox" value="#{messageControler.messageBox}" />
+						<h:commandButton id="messagebuutonbox"
+							action="#{messageControler.addToBox()}" value="Add to box"
+							styleClass="btn-info">
+							<f:ajax execute="@form" render="@form"></f:ajax>
+						</h:commandButton>
+					</div>
+					<div class="row">
+						<h1>
+							<span class="label label-default">Box Words</span>
+						</h1>
+					</div>
+					<div class="row">
+						<h:commandButton id="clearbox"
+							action="#{messageControler.clearBox()}" value="Clear box"
+							styleClass="btn-info">
+							<f:ajax execute="@form" render="@form"></f:ajax>
+						</h:commandButton>
+					</div>
+
+					<ui:repeat var="tab" value="#{allBox}">
+						<div class="row">
+							<span class="label label-pill label-success">#{tab}</span>
+						</div>
+					</ui:repeat>
+
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>

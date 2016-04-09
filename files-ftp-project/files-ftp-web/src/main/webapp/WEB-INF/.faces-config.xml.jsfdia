@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#views#listbook.xhtml"
+  PATH="/views/listbook.xhtml" SHAPE="376,104,50,25"
+  model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#error.xhtml" PATH="/error.xhtml"
+  SHAPE="360,248,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

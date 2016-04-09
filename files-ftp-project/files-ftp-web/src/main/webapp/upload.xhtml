@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<div class="jumbotron">
+			<h1>Words app</h1>
+		</div>
+		<h:form enctype="multipart/form-data">
+			<div class="contents">
+				<div class="row">
+					<h1>
+						<span class="label label-default">Upload file</span>
+					</h1>
+				</div>
+				<div class="row">
+					<h:inputFile id="file" value="#{uploadControler.uploadedFile}"></h:inputFile>
+				</div>
+				<div class="row">
+					<h:commandButton action="#{uploadControler.upload()}" value="Upload" />
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
